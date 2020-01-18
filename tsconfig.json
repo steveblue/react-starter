@@ -10,7 +10,8 @@
       "lib": ["dom", "dom.iterable", "esnext"],
       "jsx": "react",
       "noImplicitAny": true,
-      "strict": true
+      "strict": true,
+      "allowSyntheticDefaultImports": true
     },
     "include": ["src"]
 }
