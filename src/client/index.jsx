@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import { rehydrateMarks } from 'react-imported-component';
-import importedComponents from './imports';
 import App from './app/app';
 
 const element = document.getElementById('root')

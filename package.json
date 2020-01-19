@@ -11,7 +11,8 @@
     "create-bundle:server": "cross-env BABEL_ENV=server parcel build src/server/index.js -d dist/server --public-url /dist --target=node --no-source-maps",
     "generate-imported-components": "imported-components app src/client/imports.js",
     "start": "node dist/server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "author": "",
   "license": "MIT",
@@ -29,9 +30,12 @@
   "devDependencies": {
     "@babel/polyfill": "^7.8.3",
     "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
     "concurrently": "^5.0.2",
     "cross-env": "^6.0.3",
     "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
     "llog": "^0.2.0",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
