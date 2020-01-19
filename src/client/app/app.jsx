@@ -5,7 +5,7 @@ import Home from './view/root';
 import LoadingComponent from './view/loading'
 import ErrorComponent from './view/error'
 
-const Page = importComponent(() => import('./view/page'), {
+const Page = importComponent(() => import('./view/page/page'), {
   LoadingComponent,
   ErrorComponent
 });
