@@ -1,5 +1,4 @@
 import path from 'path';
-import { Response } from 'express';
 
 const errorHandler = (err, _req, res, _next) =>
     res.status(404).json({
