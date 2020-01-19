@@ -2,9 +2,9 @@
 import React from 'react';
 import { shallow } from '../../../../enzyme';
 
-import Page from './page';
+import Page from './Page';
 
-describe('List tests', () => {
+describe('Page tests', () => {
 
   it('renders', () => {
     const wrapper = shallow(<Page />);

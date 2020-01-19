@@ -1,4 +1,6 @@
 
-.page .heading {
-    background: red;
+.page {
+    .heading {
+        background: red;
+    }
 }
