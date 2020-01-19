@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
 import { rehydrateMarks } from 'react-imported-component';
+import { BrowserRouter } from 'react-router-dom';
 import App from './app/app';
 
-const element = document.getElementById('root')
+const element = document.getElementById('root');
 const app = (
   <HelmetProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </HelmetProvider>
-)
+);
 
 if (process.env.NODE_ENV === 'production') {
   // rehydrate the bundle marks

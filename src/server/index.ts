@@ -1,10 +1,10 @@
-import express from 'express';
-import cors from 'cors';
-import path from 'path';
-import chalk from 'chalk';
 import bodyParser from 'body-parser';
-import ssr from './middleware/ssr';
+import chalk from 'chalk';
+import cors from 'cors';
+import express from 'express';
+import path from 'path';
 import errorHandler from './middleware/errorHandler';
+import ssr from './middleware/ssr';
 
 const app = express();
 
@@ -20,10 +20,10 @@ app.use('/dist/client', express.static(path.resolve(process.cwd(), 'dist', 'clie
 app.get('/*', ssr);
 
 app.listen(process.env.PORT || 3200, () => {
-    console.log(
-        `[${new Date().toISOString()}]`,
-        chalk.blue(`App is running: http://localhost:${process.env.PORT || 3200}`)
-    );
+    // process.stdout.write(
+    //     `[${new Date().toISOString()}]`,
+    //     chalk.blue(`App is running: http://localhost:${process.env.PORT || 3200}`),
+    // );
 });
 
 export default app;
