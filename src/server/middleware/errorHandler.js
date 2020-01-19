@@ -1,7 +1,7 @@
 import path from 'path';
 import { Response } from 'express';
 
-const errorHandler = (err: Error, _req: any, res: Response, _next: any) =>
+const errorHandler = (err, _req, res, _next) =>
     res.status(404).json({
         status: 'error',
         message: err.message,
@@ -9,9 +9,9 @@ const errorHandler = (err: Error, _req: any, res: Response, _next: any) =>
             process.env.NODE_ENV === 'development' &&
             (err.stack || '')
                 .split('\n')
-                .map((line: string) => line.trim())
-                .map((line: string) => line.split(path.sep).join('/'))
-                .map((line: string) =>
+                .map((line) => line.trim())
+                .map((line) => line.split(path.sep).join('/'))
+                .map((line) =>
                     line.replace(
                         process
                             .cwd()

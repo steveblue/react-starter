@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev:client": "parcel src/client/index.html -p 3000 --open",
-    "dev:server": "parcel src/server/index.ts --target node --out-dir dist/server",
-    "build:client": "parcel build src/client/index.html",
-    "build:server": "parcel build src/server/index.ts --target node",
+    "dev": "npm run generate-imported-components && parcel src/client/index.html",
+    "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore src/client/imports.js --exec 'npm run build && npm run start'",
+    "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
+    "create-bundles": "concurrently \"npm run create-bundle:client\" \"npm run create-bundle:server\"",
+    "create-bundle:client": "cross-env BABEL_ENV=client parcel build src/client/index.html -d dist/client --public-url /dist/client",
+    "create-bundle:server": "cross-env BABEL_ENV=server parcel build src/server/index.js -d dist/server --public-url /dist --target=node",
+    "generate-imported-components": "imported-components app src/client/imports.js",
+    "start": "node dist/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,25 +18,27 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet-async": "^1.0.4",
+    "react-imported-component": "^6.2.1"
   },
   "devDependencies": {
-    "@types/body-parser": "^1.17.1",
-    "@types/cors": "^2.8.6",
-    "@types/express": "^4.17.2",
-    "@types/node": "^13.1.8",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
-    "@types/react-router-dom": "^5.1.3",
+    "@babel/polyfill": "^7.8.3",
+    "concurrently": "^5.0.2",
+    "cross-env": "^6.0.3",
+    "llog": "^0.2.0",
     "nodemon": "^2.0.2",
     "parcel-bundler": "^1.12.4",
+    "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.18",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "rimraf": "^3.0.0",
+    "styled-components": "^5.0.0",
+    "through": "^2.3.8"
   }
 }
