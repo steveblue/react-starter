@@ -8,13 +8,13 @@ import through from 'through';
 import App from '../../client/app/app';
 import { getHTMLFragments } from './client';
 // import { getDataFromTree } from 'react-apollo';
-export default (req, res) => {
+export default (request, res) => {
   const context = {};
   const helmetContext = {};
 const app = (
     <HelmetProvider context={helmetContext}>
       <StaticRouter
-        location={req.originalUrl}
+        location={request.originalUrl}
         context={context}>
         <App />
       </StaticRouter>

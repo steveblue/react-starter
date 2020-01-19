@@ -2,5 +2,6 @@ node_modules
 .cache
 .DS_Store
 .storybook
+yarn-error.log
 dist
 

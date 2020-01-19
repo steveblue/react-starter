@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "*": ["shared/*", "client/*", "server/*", "*"]
+      },
+      "target": "es2015",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "jsx": "react",
+      "noImplicitAny": false,
+      "strict": true,
+      "allowSyntheticDefaultImports": true
+    },
+    "include": ["src"],
+    "allowJS": true
+}
