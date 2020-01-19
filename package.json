@@ -7,8 +7,8 @@
     "dev:server": "nodemon -e js,jsx,html --ignore dist --ignore src/client/imports.js --exec 'npm run build && npm run start'",
     "build": "rimraf dist && npm run generate-imported-components && npm run create-bundles",
     "create-bundles": "concurrently \"npm run create-bundle:client\" \"npm run create-bundle:server\"",
-    "create-bundle:client": "cross-env BABEL_ENV=client parcel build src/client/index.html -d dist/client --public-url /dist/client",
-    "create-bundle:server": "cross-env BABEL_ENV=server parcel build src/server/index.js -d dist/server --public-url /dist --target=node",
+    "create-bundle:client": "cross-env BABEL_ENV=client parcel build src/client/index.html -d dist/client --public-url /dist/client --no-source-maps",
+    "create-bundle:server": "cross-env BABEL_ENV=server parcel build src/server/index.js -d dist/server --public-url /dist --target=node --no-source-maps",
     "generate-imported-components": "imported-components app src/client/imports.js",
     "start": "node dist/server",
     "test": "echo \"Error: no test specified\" && exit 1"
