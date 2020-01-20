@@ -20,8 +20,9 @@ app.use('/dist/client', express.static(path.resolve(process.cwd(), 'dist', 'clie
 app.get('/*', ssr);
 
 app.listen(process.env.PORT || 3200, () => {
+    const addr = `http://localhost:${process.env.PORT || 3200}`;
     process.stdout.write(
-        `\n` + ' ['+new Date().toISOString() + '] ' + chalk.blue(`Server running: http://localhost:${process.env.PORT || 3200}`),
+        `\n [${new Date().toISOString()}] ${chalk.green('Server running:')} ${chalk.blue(addr)}`,
     );
 });
 

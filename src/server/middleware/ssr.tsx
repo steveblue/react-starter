@@ -2,12 +2,13 @@ import React from 'react';
 import { renderToNodeStream } from 'react-dom/server';
 import { HelmetProvider } from 'react-helmet-async';
 import { StaticRouter } from 'react-router-dom';
-import { ServerStyleSheet } from 'styled-components';
 import { printDrainHydrateMarks } from 'react-imported-component';
-import through from 'through';
-import App from '../../client/app/app';
-import { getHTMLFragments } from './client';
 // import { getDataFromTree } from 'react-apollo';
+// import { ServerStyleSheet } from 'styled-components';
+import through from 'through';
+import App from '../../client/app/App';
+import { getHTMLFragments } from './client';
+
 export default (request, res) => {
   const context = {};
   const helmetContext = {};

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import importComponent from 'react-imported-component';
-import Home from './view/root';
-import LoadingComponent from './view/loading'
-import ErrorComponent from './view/error'
+import Home from './view/Root';
+import LoadingComponent from './view/Loading'
+import ErrorComponent from './view/Error'
 
-const Page = importComponent(() => import('./view/page/page'), {
+const Page = importComponent(() => import('./view/page/Page'), {
   LoadingComponent,
   ErrorComponent
 });
