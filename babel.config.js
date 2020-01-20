@@ -8,9 +8,7 @@ module.exports = {
       },
       client: {
         presets: ["@babel/preset-env", "@babel/preset-typescript", "@babel/preset-react"],
-        plugins: [
-          ["react-imported-component/babel"]
-        ]
+        plugins:  ["react-imported-component/babel"]
       }
     }
 }

@@ -1,25 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 import cheerio from 'cheerio';
-export const htmlPath = path.join(process.cwd(), 'dist', 'client', 'index.html');
-export const rawHTML = fs.readFileSync(htmlPath).toString();
-export const parseRawHTMLForData = (template, selector = "#js-entrypoint") => {
-  const $template = cheerio.load(template);
-  let src = $template(selector).attr('src')
-  return {
-    src
-  }
-}
-const clientData = parseRawHTMLForData(rawHTML)
-const appString = '<div id="root"\>'
-const splitter = '###SPLIT###'
-const [
-  startingRawHTMLFragment,
-  endingRawHTMLFragment
-] = rawHTML
-      .replace(appString, `${appString}${splitter}`)
-      .split(splitter)
-export const getHTMLFragments = ({ drainHydrateMarks }) => {
-  const startingHTMLFragment = `${startingRawHTMLFragment}${drainHydrateMarks}`
-  return [startingHTMLFragment, endingRawHTMLFragment]
+import { Helmet } from 'react-helmet';
+
+const templatePath = path.join(process.cwd(), 'dist', 'client', 'index.html');
+const HTML_TEMPLATE = fs.readFileSync(templatePath).toString();
+
+export default function generateHtml(markup) {
+
+  const helmet = Helmet.renderStatic();
+  const $template = cheerio.load(HTML_TEMPLATE);
+  $template('head').append(helmet.title.toString() + helmet.meta.toString() + helmet.link.toString());
+  $template('#root').html(markup);
+
+  return $template.html();
 }

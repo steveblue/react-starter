@@ -1,17 +1,10 @@
-import bodyParser from 'body-parser';
 import chalk from 'chalk';
-import cors from 'cors';
 import express from 'express';
 import path from 'path';
 import errorHandler from './middleware/errorHandler';
 import ssr from './middleware/ssr';
 
 const app = express();
-
-app.use(cors());
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(errorHandler);
 
