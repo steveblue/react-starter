@@ -2,14 +2,14 @@
 
 Example of how to setup a React project with Parcel.
 
-⚛  React
-✅ TypeScript
-☄️  Server Side Rendering
-⚡️  Hot Module Replacement
-⛱ Lazyloading
-🧪 Unit Tests
-📖 Storybook
-🏝 PostCSS
+- ⚛  React
+- ✅ TypeScript
+- ☄️  Server Side Rendering
+- ⚡️  Hot Module Replacement
+- ⛱ Lazyloading
+- 🧪 Unit Tests
+- 📖 Storybook
+- 🏝 PostCSS
 
 
 ### Really, Another React Starter In 2020?
