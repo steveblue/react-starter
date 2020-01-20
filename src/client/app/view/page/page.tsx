@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import './page.css';
 
 export default function Page() {
+  const title: string = 'Page';
   return (
     <React.Fragment>
       <Helmet>
         <title>About Page</title>
       </Helmet>
       <div className="page">
-        <h1 className="heading">Page</h1>
+        <h1 className="heading">{ title }</h1>
         <p>
           <br />
           <Link to="/">Click here</Link> to see another route.

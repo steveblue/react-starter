@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "serve": "nodemon -e js,jsx,html --ignore dist --ignore src/client/imports.js --exec 'npm run build:dev && npm run start'",
     "dev": "rimraf dist && npm run generate-imported-components && npm run build:dev",
     "prod": "rimraf dist && npm run generate-imported-components && npm run build:prod",
     "build:dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
@@ -12,13 +13,12 @@
     "prod:client": "cross-env BABEL_ENV=client parcel build src/client/index.html -d dist/client --public-url /dist/client --no-source-maps",
     "prod:server": "cross-env BABEL_ENV=server parcel build src/server/index.ts -d dist/server --public-url /dist --target=node --no-source-maps",
     "generate-imported-components": "imported-components app src/client/imports.js",
-    "serve": "nodemon -e js,jsx,html --ignore dist --ignore src/client/imports.js --exec 'npm run build:dev && npm run start'",
     "start": "node dist/server",
     "test": "jest",
     "pretest": "npm run lint",
     "lint": "tslint src/**/*.ts src/**/*.tsx --fix",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook"
   },
   "author": "",
   "license": "MIT",

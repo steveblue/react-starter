@@ -18,6 +18,20 @@ Parcel is faster than Webpack and there's zero configuration to maintain. If I'm
 
 After spending years with Angular CLI I can't say I'm a big fan of starter code projects. Having distributed my last starter code in 2015, I find CLI tools make it way easier to bootstrap applications. Who knows, maybe this is the beginning of a CLI tool that scaffolds this starter code.
 
+### Commands
+
+This project uses `yarn` so if you haven't already run `npm i -g yarn` to install globally. You could fallback to `node` if necessary.
+
+| Command       | Description                                 |
+| ------------- |:-------------------------------------------:|
+| `yarn serve` | Start development server w/ HMR, livereload |
+| `yarn dev`     | Build project for development      |
+| `yarn prod`     | Build project for production      |
+| `yarn start`     | Start node server     |
+| `yarn lint`     | Lint source code with TSLint  |
+| `yarn test`     | Test source code with Jest / Enzyme    |
+| `yarn storybook`     | Start storybook development server    |
+
 
 ## ROADMAP
 
