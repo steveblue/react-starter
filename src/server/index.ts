@@ -20,10 +20,9 @@ app.use('/dist/client', express.static(path.resolve(process.cwd(), 'dist', 'clie
 app.get('/*', ssr);
 
 app.listen(process.env.PORT || 3200, () => {
-    // process.stdout.write(
-    //     `[${new Date().toISOString()}]`,
-    //     chalk.blue(`App is running: http://localhost:${process.env.PORT || 3200}`),
-    // );
+    process.stdout.write(
+        `\n` + ' ['+new Date().toISOString() + '] ' + chalk.blue(`Server running: http://localhost:${process.env.PORT || 3200}`),
+    );
 });
 
 export default app;
