@@ -1,6 +1,6 @@
 # React Starter
 
-Example of how to setup a React project with Parcel.
+Example of how to setup a React project with Parcel and all the trimmings.
 
 - ⚛ React
 - ✅ TypeScript
@@ -12,9 +12,20 @@ Example of how to setup a React project with Parcel.
 - 🏝 PostCSS
 - 💇‍♂️ Prettier
 
-### Commands
+### Getting Started
 
 This project uses `yarn` so run `npm i -g yarn` if you haven't already. You could fallback to `node` if necessary.
+
+```
+yarn install
+yarn start
+```
+
+Visit (http://localhost:3200)[http://localhost:3200] in your browser.
+
+For a complete list of commands, look no further...
+
+### Commands
 
 | Command          |                 Description                 |
 | ---------------- | :-----------------------------------------: |
@@ -25,8 +36,6 @@ This project uses `yarn` so run `npm i -g yarn` if you haven't already. You coul
 | `yarn lint`      |        Lint source code with TSLint         |
 | `yarn test`      |     Test source code with Jest / Enzyme     |
 | `yarn storybook` |     Start storybook development server      |
-
-The development / production server runs on port 3200 by default.
 
 ### Really, Another React Starter In 2020?
 
