@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Root() {
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
         <title>Home Page</title>
       </Helmet>
@@ -15,5 +15,5 @@ export default function Root() {
           <Link to="/page">Click here</Link> to see another route.
         </p>
       </div>
-    </React.Fragment>);
+    </div>);
 }

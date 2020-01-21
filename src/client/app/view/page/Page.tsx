@@ -7,7 +7,7 @@ import './page.css';
 export default function Page() {
   const title: string = 'Page';
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
         <title>About Page</title>
       </Helmet>
@@ -18,5 +18,5 @@ export default function Page() {
           <Link to="/">Click here</Link> to see another route.
         </p>
       </div>
-    </React.Fragment>);
+    </div>);
 }

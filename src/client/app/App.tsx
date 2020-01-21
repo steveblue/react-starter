@@ -1,22 +1,23 @@
 import React from 'react';
 import importComponent from 'react-imported-component';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
+
+import ErrorComponent from './view/Error';
+import LoadingComponent from './view/Loading';
 import Home from './view/Root';
-import LoadingComponent from './view/Loading'
-import ErrorComponent from './view/Error'
 
 const Page = importComponent(() => import('./view/page/Page'), {
+  ErrorComponent,
   LoadingComponent,
-  ErrorComponent
 });
 
+const RenderPage = () => <Page />;
+
 const App = () => (
-  <React.Fragment>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/page" render={() => <Page />} />
-      <Redirect to="/" />
-    </Switch>
-  </React.Fragment>
-)
-export default App
+  <Switch>
+    <Route exact={true} path='/' component={Home} />
+    <Route exact={true} path='/page' render={RenderPage} />
+    <Redirect to='/' />
+  </Switch>
+);
+export default App;
