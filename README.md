@@ -21,7 +21,7 @@ yarn install
 yarn start
 ```
 
-Visit [http://localhost:3200](http://localhost:3200)in your browser.
+Visit [http://localhost:3200](http://localhost:3200) in your browser.
 
 For a complete list of commands, look no further...
 
@@ -46,3 +46,4 @@ After spending years with Angular CLI I can't say I'm a big fan of starter code 
 ## ROADMAP
 
 - i18n support
+- SSL support
