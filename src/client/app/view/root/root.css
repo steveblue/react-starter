@@ -1,14 +1,10 @@
-.page {
+.root {
   display: block;
   width: 100%;
   height: 100%;
   position: absolute;
   perspective: 1000px;
   perspective-origin: center;
-
-  .logo {
-    filter: invert(0.8);
-  }
 
   .logo.is--center {
     width: 256px;

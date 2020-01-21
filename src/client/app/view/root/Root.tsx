@@ -3,16 +3,15 @@ import Helmet from "react-helmet";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
-import "./page.css";
+import "./root.css";
 import logo from "./../../../asset/react-icon.svg";
 
-interface PageState {
+interface RootState {
   animate: boolean;
 }
 
-export default class Page extends React.Component {
-  public title: string = "Page";
-  public state: PageState = {
+export default class Root extends React.Component {
+  public state: RootState = {
     animate: false
   };
   private componentDidMount() {
@@ -20,13 +19,13 @@ export default class Page extends React.Component {
   }
   private render() {
     return (
-      <div className="page">
+      <div className="root">
         <Helmet>
-          <title>Page</title>
+          <title>Home Page</title>
         </Helmet>
         <CSSTransition in={this.state.animate} timeout={500} classNames="logo">
           <div className="logo is--center">
-            <Link to="/">
+            <Link to="/page">
               <img src={logo} />
             </Link>
           </div>

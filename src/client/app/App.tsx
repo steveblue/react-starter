@@ -4,19 +4,21 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 import ErrorComponent from "./view/Error";
 import LoadingComponent from "./view/Loading";
-import Home from "./view/Root";
+
+const Home = importComponent(() => import("./view/root/Root"), {
+  ErrorComponent,
+  LoadingComponent
+});
 
 const Page = importComponent(() => import("./view/page/Page"), {
   ErrorComponent,
   LoadingComponent
 });
 
-const RenderPage = () => <Page />;
-
 const App = () => (
   <Switch>
-    <Route exact={true} path="/" component={Home} />
-    <Route exact={true} path="/page" render={RenderPage} />
+    <Route exact={true} path="/" render={() => <Home />} />
+    <Route exact={true} path="/page" render={() => <Page />} />
     <Redirect to="/" />
   </Switch>
 );
