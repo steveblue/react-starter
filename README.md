@@ -14,7 +14,7 @@ Example of how to setup a React project with Parcel with all the trimmings.
 
 ### Getting Started
 
-This project uses `yarn` so run `npm i -g yarn` if you haven't already. You could fallback to `node` if necessary.
+This project uses `yarn` so run `npm i -g yarn` if you haven't already.
 
 ```
 yarn install
