@@ -11,12 +11,13 @@ export default function Page() {
       <Helmet>
         <title>About Page</title>
       </Helmet>
-      <div className="page">
-        <h1 className="heading">{ title }</h1>
+      <div className='page'>
+        <h1 className='heading'>{title}</h1>
         <p>
           <br />
-          <Link to="/">Click here</Link> to see another route.
+          <Link to='/'>Click here</Link> to see another route.
         </p>
       </div>
-    </div>);
+    </div>
+    );
 }

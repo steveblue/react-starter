@@ -1,9 +1,9 @@
 import path from 'path';
 
-const errorHandler = (err, _req, res, _next) =>
+const errorHandler = (err, req, res, next) =>
     res.status(404).json({
-        status: 'error',
         message: err.message,
+        status: 'error',
         stack:
             process.env.NODE_ENV === 'development' &&
             (err.stack || '')

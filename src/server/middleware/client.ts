@@ -1,6 +1,6 @@
+import cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
-import cheerio from 'cheerio';
 import { Helmet } from 'react-helmet';
 
 const templatePath = path.join(process.cwd(), 'dist', 'client', 'index.html');

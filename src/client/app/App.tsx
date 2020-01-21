@@ -15,8 +15,8 @@ const RenderPage = () => <Page />;
 
 const App = () => (
   <Switch>
-    <Route exact={true} path='/' component={Home} />
-    <Route exact={true} path='/page' render={RenderPage} />
+    <Route exact={true} path="/" component={Home} />
+    <Route exact={true} path="/page" render={RenderPage} />
     <Redirect to='/' />
   </Switch>
 );
