@@ -1,10 +1,11 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { rehydrateMarks } from 'react-imported-component';
 import { BrowserRouter } from 'react-router-dom';
-import importedComponents from 'imports';
 import App from './app/App';
+import importedComponents from './imports';
 
 const element = document.getElementById('root');
 const app = (
