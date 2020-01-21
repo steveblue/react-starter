@@ -20,7 +20,7 @@ After spending years with Angular CLI I can't say I'm a big fan of starter code 
 
 ### Commands
 
-This project uses `yarn` so if you haven't already run `npm i -g yarn` to install globally. You could fallback to `node` if necessary.
+This project uses `yarn` so run `npm i -g yarn` if you haven't already. You could fallback to `node` if necessary.
 
 | Command       | Description                                 |
 | ------------- |:-------------------------------------------:|
