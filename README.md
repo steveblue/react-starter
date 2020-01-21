@@ -1,6 +1,6 @@
 # React Starter
 
-Example of how to setup a React project with Parcel and all the trimmings.
+Example of how to setup a React project with Parcel with all the trimmings.
 
 - ⚛ React
 - ✅ TypeScript
