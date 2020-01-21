@@ -15,7 +15,7 @@ app.get('/*', ssr);
 app.listen(process.env.PORT || 3200, () => {
     const addr = `http://localhost:${process.env.PORT || 3200}`;
     process.stdout.write(
-        `\n [${new Date().toISOString()}] ${chalk.green('Server running:')} ${chalk.blue(addr)}`,
+        `\n [${new Date().toISOString()}] ${chalk.green('Server running:')} ${chalk.blue(addr)} \n`,
     );
 });
 

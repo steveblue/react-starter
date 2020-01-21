@@ -24,13 +24,12 @@ This project uses `yarn` so if you haven't already run `npm i -g yarn` to instal
 
 | Command       | Description                                 |
 | ------------- |:-------------------------------------------:|
-| `yarn serve` | Start development server w/ HMR, livereload |
-| `yarn dev`     | Build project for development      |
+| `yarn dev`     | Start development server w/ HMR, livereload |
 | `yarn prod`     | Build project for production      |
-| `yarn start`     | Start node server     |
+| `yarn serve`     | Start node server     |
 | `yarn lint`     | Lint source code with TSLint  |
 | `yarn test`     | Test source code with Jest / Enzyme    |
-| `yarn storybook`     | Start storybook development server    |
+| `yarn storybook` | Start storybook development server    |
 
 
 ## ROADMAP
