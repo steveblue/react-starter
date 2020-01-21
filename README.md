@@ -21,7 +21,7 @@ yarn install
 yarn start
 ```
 
-Visit (http://localhost:3200)[http://localhost:3200] in your browser.
+Visit [http://localhost:3200](http://localhost:3200)in your browser.
 
 For a complete list of commands, look no further...
 
