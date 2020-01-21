@@ -25,6 +25,7 @@ This project uses `yarn` so if you haven't already run `npm i -g yarn` to instal
 | Command       | Description                                 |
 | ------------- |:-------------------------------------------:|
 | `yarn dev`     | Start development server w/ HMR, livereload |
+| `yarn dev:ssr`     | Start development server w/ SSR |
 | `yarn prod`     | Build project for production      |
 | `yarn serve`     | Start node server     |
 | `yarn lint`     | Lint source code with TSLint  |
