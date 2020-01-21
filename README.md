@@ -32,6 +32,9 @@ This project uses `yarn` so if you haven't already run `npm i -g yarn` to instal
 | `yarn storybook` | Start storybook development server    |
 
 
+The development / production server runs on port 3200 by default.
+
+
 ## ROADMAP
 
 - cli for generating starter code
