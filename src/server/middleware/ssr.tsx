@@ -1,25 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/server';
-import { HelmetProvider } from 'react-helmet-async';
-import { printDrainHydrateMarks } from 'react-imported-component';
-import { StaticRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/server";
+import { HelmetProvider } from "react-helmet-async";
+import { printDrainHydrateMarks } from "react-imported-component";
+import { StaticRouter } from "react-router-dom";
 
-import App from '../../client/app/App';
-import generateHtml from './client';
+import App from "../../client/app/App";
+import generateHtml from "./client";
 
 export default (req, res) => {
   // generate the server-side rendered HTML using the appropriate router
   const context = {
-    url: null,
+    url: null
   };
   const helmetContext = {};
   const router = (
-                  <HelmetProvider context={helmetContext}>
-                    <StaticRouter location={req.originalUrl} context={context}>
-                      <App />
-                    </StaticRouter>
-                  </HelmetProvider>
-                 );
+    <HelmetProvider context={helmetContext}>
+      <StaticRouter location={req.originalUrl} context={context}>
+        <App />
+      </StaticRouter>
+    </HelmetProvider>
+  );
   const markup = ReactDOM.renderToString(router);
 
   // if react-router is redirecting

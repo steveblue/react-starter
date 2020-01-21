@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Helmet from 'react-helmet';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import Helmet from "react-helmet";
+import { Link } from "react-router-dom";
 
 export default function Root() {
   return (
@@ -15,5 +15,6 @@ export default function Root() {
           <Link to="/page">Click here</Link> to see another route.
         </p>
       </div>
-    </div>);
+    </div>
+  );
 }

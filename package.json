@@ -20,7 +20,9 @@
     "pretest": "npm run lint",
     "lint": "tslint src/**/*.ts src/**/*.tsx --fix",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook"
+    "build:storybook": "build-storybook",
+    "pretty:check": "prettier \"src/**/*.{js,jsx,ts,tsx,html,css}\" --check",
+    "pretty": "prettier \"src/**/*.{js,jsx,ts,tsx,html,css}\" --write"
   },
   "author": "",
   "license": "MIT",
@@ -68,6 +70,7 @@
     "postcss": "^7.0.26",
     "postcss-modules": "^1.5.0",
     "postcss-nested": "^4.2.1",
+    "prettier": "1.19.1",
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.18",
     "react-is": "^16.12.0",
@@ -75,6 +78,7 @@
     "rimraf": "^3.0.0",
     "ts-jest": "^24.3.0",
     "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.1.0",
     "typescript": "^3.7.5"
   }

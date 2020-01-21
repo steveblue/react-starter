@@ -1,14 +1,12 @@
 /* eslint-disable no-undef */
-import React from 'react';
-import { shallow } from '../../../../enzyme';
+import React from "react";
+import { shallow } from "../../../../enzyme";
 
-import Page from './Page';
+import Page from "./Page";
 
-describe('Page tests', () => {
-
-  it('renders', () => {
+describe("Page tests", () => {
+  it("renders", () => {
     const wrapper = shallow(<Page />);
-    expect(wrapper.find('.heading')).toBeDefined();
+    expect(wrapper.find(".heading")).toBeDefined();
   });
-
 });
