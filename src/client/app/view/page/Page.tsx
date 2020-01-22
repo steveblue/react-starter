@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { FormattedMessage } from "react-intl";
 
-import "./page.css";
+import "./page.scss";
 import logo from "./../../../asset/react-icon.svg";
 
 interface PageState {
@@ -16,10 +16,10 @@ export default class Page extends React.Component {
   public state: PageState = {
     animate: false
   };
-  private componentDidMount() {
+  public componentDidMount() {
     this.setState({ animate: true });
   }
-  private render() {
+  public render() {
     return (
       <div className="page">
         <Helmet>

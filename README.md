@@ -9,6 +9,7 @@ Example of how to setup a React project with Parcel.
 - ⛱ Lazyloading
 - 🧪 Unit Tests
 - 📖 Storybook
+- 👄 SASS
 - 🏝 PostCSS
 - 💇‍♂️ Prettier
 - 🌎 i18n
@@ -44,6 +45,16 @@ Parcel is faster than Webpack and has zero configuration to maintain. If I'm get
 
 After spending years with Angular CLI I can't say I'm a big fan of starter code projects. Having distributed my last starter code in 2015, I find CLI tools make it way easier to bootstrap applications. Who knows? Maybe this is the beginning of a CLI that scaffolds this starter code.
 
+### Development Server
+
+Run `yarn dev` to start up a development server with hot module replacement and livereload. This dev environment is client side only.
+
+To develop with server-side rendering, run `yarn dev:ssr`.
+
+### Production Server
+
+`yarn prod` builds the application for production. To view the production build in browser, run `NODE_ENV=production node dist/server`. This configuration enables gzip compression and server-side rendering.
+
 ### SSL
 
 To configure SSL, place `cert.pem` and `key.pem` files in `.config/ssl`.
@@ -59,3 +70,50 @@ Update the `dev` command so Parcel can reference the same files in the developme
 ```
 "dev": "NODE_ENV=development npm run generate-imported-components && parcel src/client/index.html --hmr-port 1235 --port 3200 --cert .config/ssl/cert.pem --key .config/ssl/key.pem"
 ```
+
+### TypeScript
+
+This project is configured to use TypeScript and TSX.
+
+### Styling
+
+`node-sass` and `postcss` are configured by default for styling. Simply include a stylesheet in the `index.html` or any `.tsx` file.
+
+```
+<link rel="stylesheet" type="text/css" href="style/style.scss">
+```
+
+```
+import "./root.scss";
+```
+
+### Lazyloading
+
+`react-imported-component` is used to handle lazyloading with React. This package was chosen because it is compatible with server-side rendering.
+
+```
+const Page = importComponent(() => import("./view/page/Page"), {
+  ErrorComponent,
+  LoadingComponent
+});
+```
+
+### Server Side Rendering
+
+`react-helmet` does all the heavy lifting. Express handles the requests, while a custom middleware server-side renders the view.
+
+### Unit Tests
+
+`jest` and `enzyme` are configured to handle unit tests by default. `tslint` runs prior to the tests.
+
+### Prettier
+
+Code is autoformatted with Prettier.
+
+### i18n
+
+`react-intl` handles localization. The demo app features server-side rendered localization.
+
+### Storybook
+
+The popular design system library is scaffolded and ready to go.
