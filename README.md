@@ -21,7 +21,7 @@ yarn install
 yarn start
 ```
 
-Visit [http://localhost:3200](http://localhost:3200) in your browser.
+Visit [http://localhost:3200](http://localhost:3200) in your browser. The server is also configurable for HTTPS.
 
 For a complete list of commands, look no further...
 
@@ -43,7 +43,22 @@ Parcel is faster than Webpack and has zero configuration to maintain. If I'm get
 
 After spending years with Angular CLI I can't say I'm a big fan of starter code projects. Having distributed my last starter code in 2015, I find CLI tools make it way easier to bootstrap applications. Who knows? Maybe this is the beginning of a CLI that scaffolds this starter code.
 
-## ROADMAP
+### SSL
+
+To configure SSL, place `cert.pem` and `key.pem` files in `.config/ssl`.
+
+Change the `serve` command to use https.
+
+```
+"serve": "PROTOCOL=HTTPS node dist/server"
+```
+
+Update the `dev` command so Parcel can reference the same files in the development server.
+
+```
+"dev": "NODE_ENV=development npm run generate-imported-components && parcel src/client/index.html --hmr-port 1235 --port 3200 --cert .config/ssl/cert.pem --key .config/ssl/key.pem"
+```
+
+### ROADMAP
 
 - i18n support
-- SSL support

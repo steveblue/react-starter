@@ -4,4 +4,4 @@ node_modules
 .storybook
 yarn-error.log
 dist
-
+.config
