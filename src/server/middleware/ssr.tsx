@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/server";
 import { HelmetProvider } from "react-helmet-async";
 import { printDrainHydrateMarks } from "react-imported-component";
 import { StaticRouter } from "react-router-dom";
-
+import { IntlProvider } from "react-intl";
+import { i18nConfig } from "./../intl/index";
 import App from "../../client/app/App";
 import generateHtml from "./client";
 
@@ -12,11 +13,25 @@ export default (req, res) => {
   const context = {
     url: null
   };
+  let locale = req.acceptsLanguages()[0];
+  if (locale.includes("-")) {
+    locale = locale.split("-")[0];
+  }
+  if (locale.includes("_")) {
+    locale = locale.split("_")[0];
+  }
+  const i18n = i18nConfig[locale] || i18nConfig.en;
   const helmetContext = {};
   const router = (
     <HelmetProvider context={helmetContext}>
       <StaticRouter location={req.originalUrl} context={context}>
-        <App />
+        <IntlProvider
+          locale={i18n.locale}
+          defaultLocale={i18n.locale}
+          messages={i18n.messages}
+        >
+          <App />
+        </IntlProvider>
       </StaticRouter>
     </HelmetProvider>
   );

@@ -1,0 +1,6 @@
+{
+  "locale": "hr",
+  "messages": {
+    "home.welcome": "Dobrodošli u {name}!"
+  }
+}

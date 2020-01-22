@@ -1,0 +1,6 @@
+{
+  "locale": "ko",
+  "messages": {
+    "home.welcome": "{name}에 오신 것을 환영합니다!"
+  }
+}

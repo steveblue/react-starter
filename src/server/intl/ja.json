@@ -1,0 +1,6 @@
+{
+  "locale": "ja",
+  "messages": {
+    "home.welcome": "{name}へようこそ！"
+  }
+}

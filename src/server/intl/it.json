@@ -1,0 +1,6 @@
+{
+  "locale": "it",
+  "messages": {
+    "home.welcome": "Benvenuto in {name}!"
+  }
+}

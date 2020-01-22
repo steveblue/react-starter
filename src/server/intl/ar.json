@@ -1,0 +1,6 @@
+{
+  "locale": "ar",
+  "messages": {
+    "home.welcome": "به {name} خوش آمدید!"
+  }
+}

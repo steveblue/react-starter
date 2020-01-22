@@ -1,0 +1,6 @@
+{
+  "locale": "ru",
+  "messages": {
+    "home.welcome": "Добро пожаловать в {name}!"
+  }
+}

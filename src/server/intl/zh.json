@@ -1,0 +1,6 @@
+{
+  "locale": "zh",
+  "messages": {
+    "home.welcome": "欢迎使用{name}！"
+  }
+}

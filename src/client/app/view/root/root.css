@@ -6,6 +6,14 @@
   perspective: 1000px;
   perspective-origin: center;
 
+  .logo a:link,
+  .logo a:visited {
+    font-family: sans-serif;
+    color: #dedede;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
   .logo.is--center {
     width: 256px;
     height: 256px;
@@ -17,6 +25,7 @@
     transform-origin: 50% 50%;
     transition-property: opacity, transform;
     transition-duration: 500ms;
+    text-align: center;
   }
 
   .logo.is--center.logo-enter {

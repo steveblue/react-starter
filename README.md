@@ -11,6 +11,7 @@ Example of how to setup a React project with Parcel.
 - 📖 Storybook
 - 🏝 PostCSS
 - 💇‍♂️ Prettier
+- 🌎 i18n
 
 ### Getting Started
 
@@ -58,7 +59,3 @@ Update the `dev` command so Parcel can reference the same files in the developme
 ```
 "dev": "NODE_ENV=development npm run generate-imported-components && parcel src/client/index.html --hmr-port 1235 --port 3200 --cert .config/ssl/cert.pem --key .config/ssl/key.pem"
 ```
-
-### ROADMAP
-
-- i18n support

@@ -1,0 +1,6 @@
+{
+  "locale": "el",
+  "messages": {
+    "home.welcome": "Καλώς 'Ηρθατε στο {name}!"
+  }
+}

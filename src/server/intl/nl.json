@@ -1,0 +1,6 @@
+{
+  "locale": "nl",
+  "messages": {
+    "home.welcome": "Welkom bij {name}!"
+  }
+}
