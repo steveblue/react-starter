@@ -7,18 +7,18 @@ import { FormattedMessage } from "react-intl";
 import "./root.scss";
 import logo from "./../../../asset/react-icon.svg";
 
-interface RootState {
+interface IRootState {
   animate: boolean;
 }
 
 export default class Root extends React.Component {
-  public state: RootState = {
+  public state: IRootState = {
     animate: false
   };
-  public componentDidMount() {
+  public componentDidMount(): void {
     this.setState({ animate: true });
   }
-  public render() {
+  public render(): JSX.Element {
     return (
       <div className="root">
         <Helmet>

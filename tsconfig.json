@@ -1,18 +1,30 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./src",
-      "paths": {
-        "*": ["shared/*", "client/*", "server/*", "*"]
-      },
-      "target": "es2020",
-      "module": "esnext",
-      "moduleResolution": "node",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "jsx": "react",
-      "noImplicitAny": false,
-      "strict": true,
-      "allowSyntheticDefaultImports": true
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "shared/*",
+        "client/*",
+        "server/*",
+        "*"
+      ]
     },
-    "include": ["src"],
-    "allowJS": true
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsx": "react",
+    "noImplicitAny": false,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src"
+  ],
+  "allowJS": true
 }

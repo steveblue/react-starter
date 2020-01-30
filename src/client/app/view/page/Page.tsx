@@ -7,19 +7,19 @@ import { FormattedMessage } from "react-intl";
 import "./page.scss";
 import logo from "./../../../asset/react-icon.svg";
 
-interface PageState {
+interface IPageState {
   animate: boolean;
 }
 
 export default class Page extends React.Component {
   public title: string = "Page";
-  public state: PageState = {
+  public state: IPageState = {
     animate: false
   };
-  public componentDidMount() {
+  public componentDidMount(): void {
     this.setState({ animate: true });
   }
-  public render() {
+  public render(): JSX.Element {
     return (
       <div className="page">
         <Helmet>
