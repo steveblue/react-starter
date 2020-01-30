@@ -8,12 +8,16 @@ import { i18nConfig } from "./../intl/index";
 import App from "../../client/app/App";
 import generateHtml from "./client";
 
+interface IRouterContext {
+  url?: null | string;
+}
+
 export default (req, res) => {
   // generate the server-side rendered HTML using the appropriate router
-  const context = {
+  const context: IRouterContext = {
     url: null
   };
-  let locale = req.acceptsLanguages()[0];
+  let locale: string = req.acceptsLanguages()[0];
   if (locale.includes("-")) {
     locale = locale.split("-")[0];
   }
@@ -35,14 +39,14 @@ export default (req, res) => {
       </StaticRouter>
     </HelmetProvider>
   );
-  const markup = ReactDOM.renderToString(router);
+  const markup: string = ReactDOM.renderToString(router);
 
-  // if react-router is redirecting
+  // if redirect
   if (context.url) {
     res.redirect(301, context.url);
   } else {
-    // format HTML and send the result
-    const html = generateHtml(markup + printDrainHydrateMarks());
+    // format HTML
+    const html: string = generateHtml(markup + printDrainHydrateMarks());
     res.send(html);
   }
 };

@@ -1,24 +1,25 @@
-import path from "path";
+import path from 'path';
+import { Response } from 'express';
 
-const errorHandler = (err, req, res, next) =>
+const errorHandler = (err: Error, req: any, res: Response, next: any) =>
   res.status(404).json({
+    status: 'error',
     message: err.message,
-    status: "error",
     stack:
-      process.env.NODE_ENV === "development" &&
-      (err.stack || "")
-        .split("\n")
-        .map(line => line.trim())
-        .map(line => line.split(path.sep).join("/"))
-        .map(line =>
+      process.env.NODE_ENV === 'development' &&
+      (err.stack || '')
+        .split('\n')
+        .map((line: string) => line.trim())
+        .map((line: string) => line.split(path.sep).join('/'))
+        .map((line: string) =>
           line.replace(
             process
               .cwd()
               .split(path.sep)
-              .join("/"),
-            "."
+              .join('/'),
+            '.'
           )
-        )
+        ),
   });
 
 export default errorHandler;

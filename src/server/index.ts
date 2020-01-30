@@ -10,11 +10,11 @@ import cors from "cors";
 import errorHandler from "./middleware/errorHandler";
 import ssr from "./middleware/ssr";
 
-const app = express();
-const env = process.env.NODE_ENV || 'development';
-const port = process.env.PORT || 3200;
-const protocol = process.env.PROTOCOL || 'HTTP';
-let server;
+const app: express.Application = express();
+const env: string = process.env.NODE_ENV || 'development';
+const port: string = process.env.PORT || '3200';
+const protocol: string = process.env.PROTOCOL || 'HTTP';
+let server: http.Server | https.Server;
 
 if (protocol === 'HTTPS') {
   const sslOptions = {
@@ -42,7 +42,7 @@ app.use(
 
 app.get("/*", ssr);
 
-server.listen(port, () => {
+server.listen(port, (): void => {
   const addr = `${protocol === 'HTTPS' ? 'https' : 'http'}://localhost:${port}`;
   process.stdout.write(
     `\n [${new Date().toISOString()}] ${chalk.green(
