@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { FormattedMessage } from "react-intl";
 
-import "./home.scss";
+import "./Home.scss";
 import logo from "./../../../asset/react-icon.svg";
 
 interface IHomeState {
