@@ -2,11 +2,11 @@
 import React from "react";
 import { shallow } from "../../../../enzyme";
 
-import Root from "./Root";
+import Home from "./Home";
 
-describe("Root tests", () => {
+describe("Home tests", () => {
   it("renders", () => {
-    const wrapper = shallow(<Root />);
+    const wrapper = shallow(<Home />);
     expect(wrapper).toBeDefined();
   });
 });

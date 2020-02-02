@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { FormattedMessage } from "react-intl";
 
-import "./root.scss";
+import "./home.scss";
 import logo from "./../../../asset/react-icon.svg";
 
-interface IRootState {
+interface IHomeState {
   animate: boolean;
 }
 
-export default class Root extends React.Component {
-  public state: IRootState = {
+export default class Home extends React.Component {
+  public state: IHomeState = {
     animate: false
   };
   public componentDidMount(): void {
@@ -20,7 +20,7 @@ export default class Root extends React.Component {
   }
   public render(): JSX.Element {
     return (
-      <div className="root">
+      <div className="home">
         <Helmet>
           <title>Home Page</title>
         </Helmet>

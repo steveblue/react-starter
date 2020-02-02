@@ -5,7 +5,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import ErrorComponent from "./view/Error";
 import LoadingComponent from "./view/Loading";
 
-const Home = importComponent(() => import("./view/root/Root"), {
+const Home = importComponent(() => import("./view/home/Home"), {
   ErrorComponent,
   LoadingComponent
 });
