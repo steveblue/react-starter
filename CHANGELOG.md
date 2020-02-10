@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# 1.0.3
+
+- FIXED some issues with default tests
+- FIXED issue with imports in src/client/imports.js
+
 ## 1.0.2
 
 - RENAME root to home in demo
